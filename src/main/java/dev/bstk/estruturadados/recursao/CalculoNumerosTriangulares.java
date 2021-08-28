@@ -2,19 +2,25 @@ package dev.bstk.estruturadados.recursao;
 
 public class CalculoNumerosTriangulares {
 
-    public static void main(String[] args) {
-        System.out.println(String.format("Alturar 1, Tem [ %s ] quadrados", calcularQuantidadeItens(1)));
-        System.out.println(String.format("Alturar 2, Tem [ %s ] quadrados", calcularQuantidadeItens(2)));
-        System.out.println(String.format("Alturar 5, Tem [ %s ] quadrados", calcularQuantidadeItens(5)));
+    public static void desenharRepresentacaoNumerosTriangulares(int altura) {
+        StringBuilder triangulo = new StringBuilder();
 
-        System.out.println("\n---------------------------------\n");
+        for (int i = 0; i <= altura; i++) {
+            triangulo
+                .append("▩ ".repeat(i))
+                .append("\n");
+        }
 
-        System.out.println(String.format("Alturar 1, Tem [ %s ] quadrados", calcularQuantidadeItensRecursivo(1)));
-        System.out.println(String.format("Alturar 2, Tem [ %s ] quadrados", calcularQuantidadeItensRecursivo(2)));
-        System.out.println(String.format("Alturar 5, Tem [ %s ] quadrados", calcularQuantidadeItensRecursivo(5)));
+        triangulo
+            .append("\n")
+            .append(String.format("# Altura = %s %n", altura))
+            .append(String.format("# Colunas = %s %n", altura))
+            .append(String.format("# Total = %s %n", calcularQuantidadeItensRecursivo(altura)));
+
+        System.out.println(triangulo.toString());
     }
 
-    private static int calcularQuantidadeItens(int altura) {
+    public static int calcularQuantidadeItens(int altura) {
         if (altura == 0) {
             return 0;
         }
@@ -29,7 +35,7 @@ public class CalculoNumerosTriangulares {
         return totalQuadrados;
     }
 
-    private static int calcularQuantidadeItensRecursivo(int altura) {
+    public static int calcularQuantidadeItensRecursivo(int altura) {
         if (altura == 0) {
             return 0;
         }
