@@ -1,30 +1,33 @@
 package dev.bstk.estruturadados.recursao
 
+import dev.bstk.S
+import dev.bstk.isNotSN
+import dev.bstk.limparConsole
 import java.util.*
 
 private val entrada = Scanner(System.`in`)
 private val calculoNumerosTrianculares = KCalculoNumerosTriangulares()
 
 fun main() {
-  var continuar = "S"
+  var continuar = S
 
-  while ("S".equals(continuar, true) or "Y".equals(continuar, true)) {
-    /// TODO: CLASSE PARA LIMPAR CONSOLE
+  while (S.equals(continuar, true)) {
+    limparConsole()
 
-    println("Informe a altura do triangulo: ")
+    print("Informe a altura do triangulo: ")
     val altura = entrada.nextInt()
 
-    println("Mostrar desenho ( S/N ): ")
+    print("Mostrar desenho ( S/N ): ")
     val mostrarDesenho = entrada.next()
 
-    println("Mostrar estatisticas ( S/N): ")
+    print("Mostrar estatisticas ( S/N): ")
     val mostrarEstatisticas = entrada.next()
 
-    if ("S".equals(mostrarDesenho, true)) {
+    if (S.equals(mostrarDesenho, true)) {
       calculoNumerosTrianculares.desenharRepresentacaoNumerosTriangulares(altura)
     }
 
-    if ("S".equals(mostrarEstatisticas, true)) {
+    if (S.equals(mostrarEstatisticas, true)) {
       calculoNumerosTrianculares.estatisticas(altura)
     }
 
@@ -33,13 +36,11 @@ fun main() {
 }
 
 fun continuarExecucao(): String {
-  println("Deseja refazer? ( S/N ): ")
+  print("Deseja refazer? ( S/N ): ")
   val resposta = entrada.next()
 
-  if (resposta.isEmpty()
-      || (!resposta.equals("S", true)
-      && !resposta.equals("N", true))) {
-    /// TODO: LIMPAR CONSOLE
+  if (resposta.isEmpty() || isNotSN(resposta)) {
+    limparConsole()
     continuarExecucao()
   }
 

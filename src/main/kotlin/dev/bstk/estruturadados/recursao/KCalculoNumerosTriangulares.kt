@@ -5,12 +5,13 @@ class KCalculoNumerosTriangulares {
   fun desenharRepresentacaoNumerosTriangulares(tamanho: Int) {
     val builder = StringBuilder()
 
-    for (i in tamanho.. 0) {
+    for (i in tamanho..0) {
       builder
           .append("▩ ".repeat(i))
           .append("\n")
     }
 
+    println("Desenho triangulo")
     println(builder.toString())
   }
 
