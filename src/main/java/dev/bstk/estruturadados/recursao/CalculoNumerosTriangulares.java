@@ -2,6 +2,8 @@ package dev.bstk.estruturadados.recursao;
 
 public class CalculoNumerosTriangulares {
 
+    private CalculoNumerosTriangulares() { }
+
     public static void desenharRepresentacaoNumerosTriangulares(int altura) {
         StringBuilder triangulo = new StringBuilder();
 
