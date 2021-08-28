@@ -17,7 +17,19 @@ public class CalculoNumerosTriangularesApp {
             System.out.print("Entre com a altura do triangulo = ");
             int altura = ENTRADA.nextInt();
 
-            CalculoNumerosTriangulares.desenharRepresentacaoNumerosTriangulares(altura);
+            System.out.print("Mostrar desenho ( S/N ) = ");
+            String mostrarDesenho = ENTRADA.next();
+
+            System.out.print("Mostrar estatisticas ( S/N ) = ");
+            String mostrarEstatisticas = ENTRADA.next();
+
+            if (StringUtils.S.equalsIgnoreCase(mostrarDesenho)) {
+                CalculoNumerosTriangulares.desenharRepresentacaoNumerosTriangulares(altura);
+            }
+
+            if (StringUtils.S.equalsIgnoreCase(mostrarEstatisticas)) {
+                CalculoNumerosTriangulares.estatitisticas(altura);
+            }
 
             continuar = continuarExecucao();
         }

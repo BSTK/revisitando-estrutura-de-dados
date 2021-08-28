@@ -13,28 +13,16 @@ public class CalculoNumerosTriangulares {
                 .append("\n");
         }
 
-        triangulo
-            .append("\n")
-            .append(String.format("# Altura = %s %n", altura))
-            .append(String.format("# Colunas = %s %n", altura))
-            .append(String.format("# Total = %s %n", calcularQuantidadeItensRecursivo(altura)));
-
         System.out.println(triangulo.toString());
     }
 
-    public static int calcularQuantidadeItens(int altura) {
-        if (altura == 0) {
-            return 0;
-        }
+    public static void estatitisticas(int altura) {
+        String estatitisticas
+            = String.format("# Altura = %s %n", altura)
+            + String.format("# Colunas = %s %n", altura)
+            + String.format("# Total = %s %n", calcularQuantidadeItensRecursivo(altura));
 
-        int totalQuadrados = 0;
-
-        while (altura > 0) {
-            totalQuadrados += altura;
-            altura--;
-        }
-
-        return totalQuadrados;
+        System.out.println(estatitisticas);
     }
 
     public static int calcularQuantidadeItensRecursivo(int altura) {
