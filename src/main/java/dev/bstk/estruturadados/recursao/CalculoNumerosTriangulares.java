@@ -26,13 +26,8 @@ public class CalculoNumerosTriangulares {
     }
 
     public static int calcularQuantidadeItensRecursivo(int altura) {
-        if (altura == 0) {
-            return 0;
-        }
-
-        if (altura == 1)  {
-            return 1;
-        }
+        if (altura == 0) { return 0; }
+        if (altura == 1) { return 1; }
 
         return (altura + calcularQuantidadeItensRecursivo(altura - 1));
     }
