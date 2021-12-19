@@ -5,9 +5,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.Random;
 
-public class CalcularMenor {
+public class CalcularMaiorMenor {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(CalcularMenor.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CalcularMaiorMenor.class);
 
     private static final Random RANDOM = new Random();
 
