@@ -12,9 +12,9 @@ public class CalcularMaiorMenor {
     private static final Random RANDOM = new Random();
 
     public static void main(String[] args) {
-        long[] datasetMenor = RANDOM.longs(100, 0, 100_000_000).toArray();
-        long[] datasetMaior = RANDOM.longs(100, 0, 100_000_000).toArray();
-        long[] datasetMenorMaior = RANDOM.longs(100, 0, 100_000_000).toArray();
+        long[] datasetMenor = RANDOM.longs(10_0000_000, 0, 100_000_000).toArray();
+        long[] datasetMaior = RANDOM.longs(10_0000_000, 0, 100_000_000).toArray();
+        long[] datasetMenorMaior = RANDOM.longs(10_0000_000, 0, 100_000_000).toArray();
 
         LOGGER.info("Menor: [ {} ]\n", calcularMenor(datasetMenor));
         LOGGER.info("Maior: [ {} ]\n", calcularMaior(datasetMaior));
