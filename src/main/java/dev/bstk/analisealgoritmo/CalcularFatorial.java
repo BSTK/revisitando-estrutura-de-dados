@@ -9,9 +9,9 @@ public class CalcularFatorial {
 
     public static void main(String[] args) {
         LOGGER.info("Fatorial(4)   = [ {} ]", fatorial(4));
-        LOGGER.info("FatorialII(4) = [ {} ]", fatorialII(4));
+        LOGGER.info("FatorialII(4) = [ {} ]", fatorialRecursao(4));
         LOGGER.info("Fatorial(6)   = [ {} ]", fatorial(7));
-        LOGGER.info("FatorialII(6) = [ {} ]", fatorialII(7));
+        LOGGER.info("FatorialII(6) = [ {} ]", fatorialRecursao(7));
     }
 
     /** Normal **/
@@ -28,7 +28,7 @@ public class CalcularFatorial {
     }
 
     /** Com recursão **/
-    private static long fatorialII(long n) {
-        return (n == 0 || n == 1) ? 1 : n * fatorialII(n - 1);
+    private static long fatorialRecursao(long n) {
+        return (n == 0 || n == 1) ? 1 : n * fatorialRecursao(n - 1);
     }
 }
